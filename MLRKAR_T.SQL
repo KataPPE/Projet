@@ -8,7 +8,7 @@
       OUVERTURE DE LA BASE PPE_Karate
 ----------------------------------------------------------------------------- */
 
-use PPE_Karate
+use ScriptKarate
 go
 
 -- ------------------------------------------------------------------------------- 
@@ -90,11 +90,11 @@ begin
      begin
           if @numrows = 1
           begin
-               select @insENT_NUMLIPRO = inserted.ENT_NUMLIPRO
+               select ENT_NUMLIPRO = inserted.ENT_NUMLIPRO
                from inserted
                update CHOISIR
                set
-                    CHOISIR.ENT_NUMLIPRO = @insENT_NUMLIPRO
+                    CHOISIR.ENT_NUMLIPRO = inserted.ENT_NUMLIPRO
                from CHOISIR,inserted,deleted
                where
                     CHOISIR.ENT_NUMLIPRO = deleted.ENT_NUMLIPRO
@@ -113,11 +113,11 @@ begin
      begin
           if @numrows = 1
           begin
-               select @insENT_NUMLIPRO = inserted.ENT_NUMLIPRO
+               select ENT_NUMLIPRO = inserted.ENT_NUMLIPRO
                from inserted
                update CLUB
                set
-                    CLUB.ENT_NUMLIPRO = @insENT_NUMLIPRO
+                    CLUB.ENT_NUMLIPRO = inserted.ENT_NUMLIPRO
                from CLUB,inserted,deleted
                where
                     CLUB.ENT_NUMLIPRO = deleted.ENT_NUMLIPRO
@@ -136,11 +136,11 @@ begin
      begin
           if @numrows = 1
           begin
-               select @insENT_NUMLIPRO = inserted.ENT_NUMLIPRO
+               select ENT_NUMLIPRO = inserted.ENT_NUMLIPRO
                from inserted
                update JUGER
                set
-                    JUGER.ENT_NUMLIPRO = @insENT_NUMLIPRO
+                    JUGER.ENT_NUMLIPRO = inserted.ENT_NUMLIPRO
                from JUGER,inserted,deleted
                where
                     JUGER.ENT_NUMLIPRO = deleted.ENT_NUMLIPRO
