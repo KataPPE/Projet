@@ -1,2 +1,0 @@
-c:\users\mickaël\documents\visual studio 2013\Projects\PPE_Karate\PPE_Karate\bin\Debug\PPE_Karate.exe.config
-C:\Users\Mickaël\Desktop\Projet\PPE_Karate\PPE_Karate\bin\Debug\PPE_Karate.exe.config
